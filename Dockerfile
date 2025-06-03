@@ -14,7 +14,7 @@ COPY --from=ghcr.io/astral-sh/uv:0.4.15 /uv /bin/uv
 
 # Install system dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
-    build-essential \
+    build-essential curl wget git tree fd-find ripgrep jq httpie silversearcher-ag bat ncdu htop \
     && rm -rf /var/lib/apt/lists/*
 
 
